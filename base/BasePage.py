@@ -7,7 +7,7 @@ class BasePage():
 
         self.driver = driver
 
-    def verifyPageTitle(self, title_to_verify):
+    def verify_page_title(self, title_to_verify):
 
         actual_title = BrowserMethods.get_title(self.driver)
 
@@ -15,4 +15,7 @@ class BasePage():
             return True
         else:
             return False
+
+    def navigate_to_url(self, url):
+        BrowserMethods.navigate_to_url(self.driver, url)
 
